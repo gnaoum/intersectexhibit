@@ -1,186 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Display practice</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/pan3egb.css">
+    </head>
+    <style>
+        /* STYLES */
       
-    <title>Hello!</title>
-    <meta charset="style>
-      
-        
-        /* ALL THE STYLES */
-        /* step 1
-            display: flex
-        */
-        
-        /*
-        .-bar {
-            display: flex;
+        .content {
+            padding: 10px;
             background-color: blueviolet;
-            justify-content: space-between;
+            height: 100px;
+            margin: 10px;
         }
         
-        .logo-containernavigation {
-            display: flex;
-            justify-content: center;
-            background-color: aqua;
-            width: 20%;
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
         }
-        */
         
-        /* step 2
-            flex-direction: column
-            flex-direction: column-reverse;
-            flex-direction: column-reverse;
-            flex-direction: row-reverse;
-        */
+        h1 {
+            text-align: left; 
+            color: gray;
+            font-size: 12px;
+            font-family: americane-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
         
-        /* step 3
-            justify-content: flex-end;
-            justify-content: flex-start;
-            justify-content: center;
-            justify-content: space-around;
-            justify-content: space-between;
-        */
-        utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  </head>  
-   <style>
-        /* step 4
-            // add different heights to each item then align them
-            align-items: center;
-        */
+        .holder {
+            height: 400px;
+            grid-gap: 10px; 
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+                "navbar navbar navbar navbar navbar"
+                ". . . . ."
+                ". logo-page logo-page logo-page ."
+                ". . date . .";                    
+        }
         
-        /* step 5
-            // on one item only
-            align-self: flex-end;
-        */
+        .navbar {
+            grid-area: navbar;
+            background-color: white;
+            padding: 20px;
+            filter: drop-shadow(0 0 0.75rem grey);
+            position: fixed;
+        }
         
-        /* step 6
-            // add a bunch on items
-            flex-wrap: wrap;
-            flex-wrap: wrap-reverse;
-        */
+        .logo-page {
+            grid-area: logo-page;
+            justify-self: center;
+            margin-top: 100px;
+        }
         
-        /*
-            //  make a navigation bar
+        .date {
+            grid-area: date;
+            justify-self:center;
+            margin-top: 30px;
+            font-family: americane-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;           
+            font-size: 30px;
+            color: gray;
+        }
         
-        */
        
-           /* #item-one {
-           width: 200px;
-       }
        
-       #item-two {
-           width:  300px;
-       }
-       #item-three {
-           width: 100px;
-           align-self: flex-start;
-       } */
-       
-       .navigation-bar {
-           background-color: purple;
-           display: flex;
-           justify-content: space-between;
-           width: 100%;
-           position: fixed;
-           left: 0;
-           top: 0;
-       }
-
-        .flex-container {
-            background-color: firebrick;
-            display:flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            margin: 25px;
-            width: 300px;
+    //*  
+        .home {  
+            grid-area: home;
+            color: gray;
           
         }
         
-        .flex-item {
-            background-color: seagreen;
-            margin: 5px;
-            color: white;
-            flex-grow: 1;
+       .about {  
+           grid-area: about;
+           color: gray;
+        
         }
-       
-       .logo {
-           background: white;
-           height: 30px;
-           width: 40px;
-           margin: 25px;
-         }
-  
-       body {
-           font-family: 'Montserrat', sans-serif;
-           font-size: 14px;
-           padding: 0 20px 20px;
-       }
-       
-       
-       .position-relative {
-           background-color: antiquewhite;
-           position: relative;
-           top: 10px;
-           left: 10px;
-           height: 200px;
-       }
-       
-       .position-absolute {
-           background-color:cadetblue;
-           position: absolute;
-           bottom: 0;
-           right: 0;
-       }
-       
-       .website-body {
-           margin-top: 100px;
-       }
-       
+        
+        .contact {  
+          grid-area: contact;
+          color: gray;
+        } 
+        *//
+    
     
     </style>
     <body>
-        <div class="navigation-bar">
-            <div class="logo">
-                Logo
+        <div class="holder">
+            <!--navbar-->
+            <div class="navbar">
+                <h1>HOME</h1> <h1>ABOUT</h1> <h1>CONTACT</h1>
+                
+        <!--   <div class="navbar home">
+                HOME
             </div>
+        <div class="navbar about">
+                ABOUT
+            </div>
+            <div class="navbar contact">
+                CONTACT
+            </div> -->
+                </div>
             
-         <div class="flex-container">
-            <div class="flex-item" >
-                <a href="class2.html">Puppies</a>
-                         </div>
-            <div class="flex-item"> 
-             <a href="class2.html" target="_blank">Puppies2</a>
-             </div>  
-            <div class="flex-item"> 
-             <a href="#bottom">Bottom</a>
-             </div>
-            <div class="flex-item"> Item 4</div>  
-             
+            <div class="logo-page">
+                <img src="logo-website.png"
+                     width="400">
+            </div>  
+            
+                <div class="date">
+                    APRIL 3RD
+                </div>
+            
+    <div class="students">
+            <div class="students student-one">
+            </div>
+                <p>ANIKKA</p>
+        
+            <div class="students student-two">
+            </div>
+                <p>BOBBY</p>
+            <div class="students student-three">
+            </div> 
+                <p>COLIN</p>
+        <div class="students student-four">
+            </div> 
+                <p>GABI</p>
+    </div>
+            
         </div>
-           
-        </div>
-        <br>
-        <div class="website-body">
-        <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-</p>
-            <h1 id="bottom"> I am at the bottom</h1>
-        </div>
-    
+        
     </body>
 </html>
