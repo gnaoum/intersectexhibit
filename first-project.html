@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Display practice</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/pan3egb.css">
+    </head>
+    <style>
+        /* STYLES */
+      
+        .content {
+            padding: 10px;
+            background-color: blueviolet;
+            height: 100px;
+            margin: 10px;
+        }
+        
+        body {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: left; 
+            color: gray;
+            font-size: 12px;
+            font-family: americane-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .holder {
+            height: 400px;
+            grid-gap: 10px; 
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+                "navbar navbar navbar navbar navbar"
+                ". . . . ."
+                ". . logo-page . ."
+                ". . date . .";                    
+        }
+        
+        .navbar {
+            grid-area: navbar;
+            background-color: white;
+            padding: 20px;
+            filter: drop-shadow(0 0 0.75rem grey);
+            position: fixed;
+        }
+        
+        .logo-page {
+            grid-area: logo-page;
+            justify-self: center;
+            margin-top: 100px;
+        }
+        
+        .date {
+            grid-area: date;
+            justify-self:center;
+            margin-top: 30px;
+            font-family: americane-condensed, sans-serif;
+            font-weight: 400;
+            font-style: normal;           
+            font-size: 30px;
+            color: gray;
+        }
+        
+       
+       
+    //*  
+        .home {  
+            grid-area: home;
+            color: gray;
+          
+        }
+        
+       .about {  
+           grid-area: about;
+           color: gray;
+        
+        }
+        
+        .contact {  
+          grid-area: contact;
+          color: gray;
+        } 
+        *//
+    
+    
+    </style>
+    <body>
+        <div class="holder">
+            <!--navbar-->
+            <div class="navbar">
+                <h1>HOME</h1> <h1>ABOUT</h1> <h1>CONTACT</h1>
+                
+        <!--   <div class="navbar home">
+                HOME
+            </div>
+        <div class="navbar about">
+                ABOUT
+            </div>
+            <div class="navbar contact">
+                CONTACT
+            </div> -->
+                </div>
+            
+            <div class="logo-page">
+                <img src="logo-website.png"
+                     width="400">
+            </div>  
+            
+                <div class="date">
+                    APRIL 3RD
+                </div>
+            
+    <div class="students">
+            <div class="students student-one">
+            </div>
+                <p>ANIKKA</p>
+        
+            <div class="students student-two">
+            </div>
+                <p>BOBBY</p>
+            <div class="students student-three">
+            </div> 
+                <p>COLIN</p>
+        <div class="students student-four">
+            </div> 
+                <p>GABI</p>
+    </div>
+            
+        </div>
+        
+    </body>
+</html>
